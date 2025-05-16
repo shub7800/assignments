@@ -5,7 +5,14 @@
 */
 
 function isAnagram(str1, str2) {
+    // Convert both strings to lowercase
+    str1 = str1.toLowerCase();
+    str2 = str2.toLowerCase();
 
+    // Split, sort, and join the strings
+    return str1.split('').sort().join('') === str2.split('').sort().join('');
 }
 
+// Export the function for use in other files
 module.exports = isAnagram;
+
